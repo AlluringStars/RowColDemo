@@ -20,6 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.intellij.lang.annotations.JdkConstants
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,8 +50,8 @@ fun TextCell(text: String, modifier: Modifier = Modifier){
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier){
-    Row(verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier.size(width = 400.dp, height = 200.dp)){
+    Column(horizontalAlignment = Alignment.End,
+        modifier = modifier.width (250.dp)){
         TextCell("1")
         TextCell("2")
         TextCell("3")
